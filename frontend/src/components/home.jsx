@@ -28,6 +28,14 @@ import {
 import axios from "axios";
 
 export const Home = () => {
+
+
+  useEffect(() => {
+    dispatch(Food());
+    Get()
+  }, []);
+
+  
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
   const [data, setdata] = useState([]);
@@ -90,9 +98,7 @@ export const Home = () => {
         dispatch(err(e));
       });
   };
-  useEffect(() => {
-    dispatch(Food());
-  }, []);
+
 
   const Get=()=>{
     axios
