@@ -45,13 +45,13 @@ export const Home = () => {
   };
 
   const Low = () => {
-    const sort = data.sort((a, b) => {
+    const sort = food.sort((a, b) => {
       return a.price - b.price;
     });
     dispatch(Data(sort));
   };
   const Top = () => {
-    const sort = data.sort((a, b) => {
+    const sort = food.sort((a, b) => {
       return b.price - a.price;
     });
     dispatch(Data(sort));
