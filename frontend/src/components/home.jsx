@@ -35,7 +35,7 @@ export const Home = () => {
     Get()
   }, []);
 
-  
+
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
   const [data, setdata] = useState([]);
@@ -53,13 +53,13 @@ export const Home = () => {
   };
 
   const Low = () => {
-    const sort = food.sort((a, b) => {
+    const sort = data.sort((a, b) => {
       return a.price - b.price;
     });
     dispatch(Data(sort));
   };
   const Top = () => {
-    const sort = food.sort((a, b) => {
+    const sort = data.sort((a, b) => {
       return b.price - a.price;
     });
     dispatch(Data(sort));
