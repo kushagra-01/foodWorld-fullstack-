@@ -34,10 +34,11 @@ export const Home = () => {
   const Navigate = useNavigate();
 
   const handleSearch = (e) => {
+    Get()
     const filteredContacts =
       e.length === 0
-        ? food
-        : food.filter((contact) =>
+        ? data
+        : data.filter((contact) =>
             contact.name.toLowerCase().includes(e.toLowerCase())
           );
     dispatch(Data(filteredContacts));
@@ -56,15 +57,15 @@ export const Home = () => {
     dispatch(Data(sort));
   };
   const Non = () => {
-    
-    const sort = food.filter((contact) =>
+    Get()
+    const sort = data.filter((contact) =>
     contact.veg!=="Vegiterian"
   );
     dispatch(Data(sort));
   };
   const Veg = () => {
     Get()
-    const sort = food.filter((contact) =>
+    const sort = data.filter((contact) =>
     contact.veg=="Vegiterian"
   );
     dispatch(Data(sort));
